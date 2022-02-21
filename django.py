@@ -1,15 +1,4 @@
-# add internal url page 
-
-
-from django.urls import path
-from . import views
-
-urlpatterns = [
-  path('',views.homepage, name='homepage')
-]
-
-
-
+# load pagewtih render 
 #################################################
 ############  view page #########################
 #################################################
@@ -21,3 +10,7 @@ from django.http import HttpResponse
 
 def homepage(request):
     return HttpResponse("hello there friends")
+
+
+def homepageNew(request): #---------------------------------------------------------->  create folder 
+    return render(request,'appname/templatge.html')                                    #  templates > appName > templatepage.html
