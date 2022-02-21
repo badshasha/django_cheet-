@@ -1,3 +1,7 @@
-manage py is the special file dont touch it 
+debug mood we using it in developing time 
 
-some thims it's cause errros after you edit it 
+benifit of the DEBUG == True 
+    
+  [+]  it's provide more informaion 
+  [+]  specially meaningfull errors 
+    
