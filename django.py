@@ -1,8 +1,9 @@
-# add apps to setting 
+# add new url file
+# add it's to main url page 
 
-INSTALLED_APPS = [
-    
-    'mainpage.apps.MainpageConfig',
-    'adminController.apps.AdmincontrollerConfig'
 
+from django.urls import path , include
+
+urlpatterns = [
+    path('',include("generator.urls"))  # bofore creating the link please create the url link other wise it's not working 
 ]
