@@ -1,2 +1,7 @@
-# show all the command available with the version
-django-admin 
+# start project 
+# start new project [+]
+
+django-admin startproject project_name 
+
+ex : 
+❯ django-admin startproject password_genrator
