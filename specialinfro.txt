@@ -1,0 +1,3 @@
+manage py is the special file dont touch it 
+
+some thims it's cause errros after you edit it 
