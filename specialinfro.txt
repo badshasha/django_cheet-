@@ -1,7 +1,2 @@
-debug mood we using it in developing time 
-
-benifit of the DEBUG == True 
-    
-  [+]  it's provide more informaion 
-  [+]  specially meaningfull errors 
-    
+url is the starting point of the page ones users requirst some thing it's looking 
+informaiton on the url page 
