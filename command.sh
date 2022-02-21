@@ -1,7 +1,3 @@
-# start project 
-# start new project [+]
+# how to run project 
 
-django-admin startproject project_name 
-
-ex : 
-❯ django-admin startproject password_genrator
+python3 manage.py runserver
