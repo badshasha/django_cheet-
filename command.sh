@@ -1,4 +1,3 @@
-# other way to see all command 
+# create new app
 
-python3 manage.py help
-
+python3 manage.py startapp generator
