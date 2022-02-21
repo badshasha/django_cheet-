@@ -1,3 +1,4 @@
-# how to run project 
+# other way to see all command 
 
-python3 manage.py runserver
+python3 manage.py help
+
