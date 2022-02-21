@@ -1,9 +1,23 @@
-# add new url file
-# add it's to main url page 
+# add internal url page 
 
 
-from django.urls import path , include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('',include("generator.urls"))  # bofore creating the link please create the url link other wise it's not working 
+  path('',views.homepage, name='homepage')
 ]
+
+
+
+#################################################
+############  view page #########################
+#################################################
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+
+def homepage(request):
+    return HttpResponse("hello there friends")
