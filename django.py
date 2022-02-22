@@ -1,7 +1,4 @@
-# how to see table informaton on admin site 
+# add meaid to root directory 
+# setting file 
 
-from django.contrib import admin
-from .models import Project
-
-# Register your models here.
-admin.site.register(Project)
+MEDIA_ROOT = BASE_DIR / 'media'
