@@ -1,14 +1,4 @@
-# watch image on site 
+# get all project 
+from .modes import model_name
 
-# setting file 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
-
-
-# url maning page
-from django.conf.urls.static import static
-from django.conf import settings
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+model_name.objects.all()
