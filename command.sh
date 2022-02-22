@@ -1,2 +1,3 @@
-# add migrations 
-python3 manage.py migrate
+# find new migrations 
+
+❯ python3 manage.py makemigrations
