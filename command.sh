@@ -1,4 +1,2 @@
-# create new app
-
-python3 manage.py startapp generator
-
+# add migrations 
+python3 manage.py migrate
