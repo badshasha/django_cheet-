@@ -1,16 +1,25 @@
-{% load static %}
+<!-- simple  -->
+{{ form.as_p }}  
 
 
-<!-- folder structure  -->
+<!-- advance [look at the input name action] -->
 
-<!-- static 
-        |
-        |-> folder_name
-                |
-                |-> image.jpg
+<div class="container">
+    <form style="width:400px;" method="POST" action="{% url 'todo:todohomepage' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="exampleInputEmail1">user name</label>
+        <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user name">
 
-
-
--->
-
-<img src="{% static 'foldername/image.jpg' %}" alt="">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input name="password1" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword2">confirm Password</label>
+        <input name="password2" type="password" class="form-control" id="exampleInputPassword2" placeholder="confirm password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
