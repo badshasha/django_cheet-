@@ -1,18 +1,8 @@
-{% load static %}
+<!--  creating base template  -->
 
+<body>
 
-<!-- folder structure  -->
+                {% block any_name %} {% endblock %}
 
-<!-- static 
-        |
-        |-> folder_name
-                |
-                |-> image.jpg
+</body>
 
-
-
--->
-
-<img src="{% static 'foldername/image.jpg' %}" alt="">
-
-<a href="{% url 'blog:url_name'  id %}"></a>
