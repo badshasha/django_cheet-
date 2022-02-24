@@ -1,6 +1,6 @@
 
 def todopageinfo(request,todo_id):
-    todo = get_object_or_404(Todo , pk=todo_id)
+    todo = get_object_or_404(Todo , pk=todo_id , user= request.user) # other wise user can access to all other objects 
 
     if request.method == "GET":
         form = TodoForms(instance=todo)
