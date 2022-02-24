@@ -1,17 +1,21 @@
-# most use full libs for authentication 
+blog:url references path
+    
+# path with route id 
 
-from django.shortcuts import render , get_object_or_404 , redirect
-from django.http import HttpResponse
-from django.contrib.auth.models import  User
-from django.contrib.auth.forms import  UserCreationForm
-from  django.contrib.auth import login , logout
-from django.db import IntegrityError
-
-# how to logout
+from django.urls import path
+from . import views
 
 
-def todologout(request):
-    if request.method == "POST":
-        logout(request)
-        return redirect('todo:todohomepage')
+app_name = 'blog' # how to reference 
 
+urlpatterns = [
+    path('',views.gloghome,name='blogHomePage'),
+    path('<int:blog_id>/' , views.selectedBlogPage , name='selectePage'),
+
+]
+
+
+# views page 
+
+def selectedBlogPage(request,blog_id):
+    return render(request , 'blog/selected.html')
