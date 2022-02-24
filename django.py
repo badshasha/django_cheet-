@@ -19,3 +19,11 @@ def todocreate(request):
         else:
             error = "empty title not allow"
     return render(request, 'todo/createTodo.html' , {'form' : TodoForms() ,'error' : error} )
+
+
+# show specific user 
+
+
+def todoContent(request):
+    todos = Todo.objects.filter(user=request.user) # read all objects
+    return render(request, 'todo/allinfo.html' , {'todos' : todos })
