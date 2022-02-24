@@ -25,5 +25,6 @@ def todocreate(request):
 
 
 def todoContent(request):
-    todos = Todo.objects.filter(user=request.user) # read all objects
+    todos_not = Todo.objects.filter(user=request.user, datecompleted__isnull=True)  # read not compleated
+    todos_compleate = Todo.objects.filter(user=request.user, datecompleted__isnull=False) # read compleated
     return render(request, 'todo/allinfo.html' , {'todos' : todos })
