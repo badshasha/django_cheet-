@@ -1,4 +1,9 @@
-# get all project 
-from .modes import model_name
+# most use full libs for authentication 
 
-model_name.objects.all()
+from django.shortcuts import render , get_object_or_404 , redirect
+from django.http import HttpResponse
+from django.contrib.auth.models import  User
+from django.contrib.auth.forms import  UserCreationForm
+from  django.contrib.auth import login , logout
+from django.db import IntegrityError
+
