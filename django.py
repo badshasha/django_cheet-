@@ -1,11 +1,21 @@
-# admin readonly fields 
-
-from django.contrib import admin
-from .models import  Todo
-# Register your models here.
-
-class TodoAdmin(admin.ModelAdmin):
-    readonly_fields = ('created',)
+# add form to database 
 
 
-admin.site.register(Todo, TodoAdmin)
+# there are two ways to do it 
+    # using form   --> form .save
+    # using create new model  -> model.save()
+
+
+# first method 
+def todocreate(request):
+    error = ""
+    if request.method == "POST":
+        if request.POST["title"] is not None and request.POST["title"] != "":
+            form = TodoForms(request.POST)
+            newtodo = form.save(commit=False) # dont save it on the database
+            newtodo.user = request.user       # add user 
+            newtodo.save()
+            return redirect('todo:todoall')
+        else:
+            error = "empty title not allow"
+    return render(request, 'todo/createTodo.html' , {'form' : TodoForms() ,'error' : error} )
